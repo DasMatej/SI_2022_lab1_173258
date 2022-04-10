@@ -1,5 +1,5 @@
-Cheese
-Bananas
-Bread
-Pasta
-Rice
+Cheese x 5
+Bananas x 2
+Bread x 15
+Pasta x 3
+Rice x 50
