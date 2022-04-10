@@ -1,5 +1,11 @@
 Cheese x 5
 Bananas x 10
 Bread x 15
+<<<<<<< HEAD
 Pasta x 3
 Rice x 25
+=======
+Eggs x 3
+Rice x 50
+Pudding x 10
+>>>>>>> branch2
