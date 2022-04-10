@@ -1,0 +1,363 @@
+Matej@DESKTOP-RQ3QCIA MINGW64 ~
+$ cd /c/Users/Matej/Desktop/Finki/SI/lab1
+-----> Vleguvanje vo folderot za zapocnuvanje so kloniranje
+
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1 (master)
+$ git clone https://github.com/DasMatej/SI_2022_lab1_173258.git
+Cloning into 'SI_2022_lab1_173258'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (6/6), done.
+-----> kloniranje na remote repo
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1 (master)
+$ cd /c/Users/Matej/Desktop/Finki/SI/lab1/SI_2022_lab1_173258
+-----> vleguvanje vo clone repo lokalno
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        shopping_list.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+-----> so git status se gleda vo koja sostojba e noviot file, odnosno sega e vo untracked
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git add shopping_list.txt
+-----> addnuvanje za commit na untracked files i prefrluvanje vo staged faza
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   shopping_list.txt
+-----> Spremni za commit added files
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git commit -m "Add 5 items to the shopping list"
+[master 43e6b8c] Add 5 items to the shopping list
+ 1 file changed, 5 insertions(+)
+ create mode 100644 shopping_list.txt
+-----> Commiting na shpping_list so message i prefrluvanje od staged vo unmodified
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git add *.txt
+-----> od unmodified se pravi vo modified i addnuvanje na noviot modified folder za commit
+
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git commit -m "Add quantities to the items"
+[master ce142a1] Add quantities to the items
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+-----> commiting so noviot message i quantities vo fileot
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git branch branch1
+-----> kreiranje na nova granka branch1
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git branch branch2
+-----> kreiranje na nova granka branch2
+
+---- Log pod 8. ----
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git log
+commit ce142a13a01fdf2df071c47f705decc39f4a9895 (HEAD -> master, branch2, branch1)
+Author: DasMatej <dasmatej7@gmail.com>
+Date:   Sun Apr 10 18:04:15 2022 +0200
+
+    Add quantities to the items
+
+commit 43e6b8ca08051f675309e4f012be916d60bd87b6
+Author: DasMatej <dasmatej7@gmail.com>
+Date:   Sun Apr 10 17:58:14 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit de62268620cff9ca843fa5cb6d64092b15d89090 (origin/master, origin/HEAD)
+Author: DasMatej <84350673+DasMatej@users.noreply.github.com>
+Date:   Sun Apr 10 17:34:20 2022 +0200
+
+    Update README.md
+
+commit 201e96e7190aa412c8038fcb6683e89d89300041
+----------------------
+-----> so git log se pregleduva i chita istorija na se shtp se slucuva so repoto. 
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git push --all -u
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 632 bytes | 632.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/DasMatej/SI_2022_lab1_173258.git
+   de62268..ce142a1  master -> master
+ * [new branch]      branch1 -> branch1
+ * [new branch]      branch2 -> branch2
+branch 'master' set up to track 'origin/master'.
+branch 'branch1' set up to track 'origin/branch1'.
+branch 'branch2' set up to track 'origin/branch2'.
+-----> Se pushnuvaat SITE granki vo remote repoto i se sinhroniziraat
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git checkout branch1
+Switched to branch 'branch1'
+Your branch is up to date with 'origin/branch1'.
+-----> se prefrluvame na branch1
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (branch1)
+$ git status
+On branch branch1
+Your branch is up to date with 'origin/branch1'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   shopping_list.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+-----> vo branch1 menuvamme shopping_list.txt
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (branch1)
+$ git add shopping_list.txt
+-----> addnuvame shopping list so promenet brojot na naracki na 5tiot element
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (branch1)
+$ git commit -m "Change quantity of item #5"
+[branch1 d5ed5df] Change quantity of item #5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+-----> commmit so message so promena na brojot na naracki na 5tiot element
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (branch1)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+-----> premestuvanje na head vo master
+
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   shopping_list.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+-----> promena (modified) na fileot shopping_list.txt
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git add *.txt
+-----> dodavanje za commit site .txt files (odnosno shopping_list.txt)
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   shopping_list.txt
+-----> spremno za commit shopping_list.txt
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git commit -m "Change quantity of item #2"
+[master 50a4149] Change quantity of item #2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+-----> comminting so promena na brojot na items vo 2riot item
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git push --all -u
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 6 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 565 bytes | 565.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/DasMatej/SI_2022_lab1_173258.git
+   ce142a1..d5ed5df  branch1 -> branch1
+   ce142a1..50a4149  master -> master
+branch 'branch1' set up to track 'origin/branch1'.
+branch 'branch2' set up to track 'origin/branch2'.
+branch 'master' set up to track 'origin/master'.
+-----> Sinhronizacija na site branches
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git checkout branch2
+Switched to branch 'branch2'
+Your branch is up to date with 'origin/branch2'.
+-----> Vleguvanje vo branch2
+
+------ Log pod 16. -----
+commit e164bff4aeaea574badf91f858570a8da0b604b6 (HEAD -> branch2)
+Author: DasMatej <dasmatej7@gmail.com>
+Date:   Sun Apr 10 18:56:26 2022 +0200
+
+    Modify item #4
+
+commit ce142a13a01fdf2df071c47f705decc39f4a9895 (origin/branch2)
+Author: DasMatej <dasmatej7@gmail.com>
+Date:   Sun Apr 10 18:04:15 2022 +0200
+
+    Add quantities to the items
+
+commit 43e6b8ca08051f675309e4f012be916d60bd87b6
+Author: DasMatej <dasmatej7@gmail.com>
+Date:   Sun Apr 10 17:58:14 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit de62268620cff9ca843fa5cb6d64092b15d89090
+Author: DasMatej <84350673+DasMatej@users.noreply.github.com>
+Date:   Sun Apr 10 17:34:20 2022 +0200
+
+    Update README.md
+
+commit 201e96e7190aa412c8038fcb6683e89d89300041
+Author: DasMatej <84350673+DasMatej@users.noreply.github.com>
+Date:   Sun Apr 10 17:33:59 2022 +0200
+
+    Initial commit
+
+--------------------------
+---> git log za promena samo na item #4
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (branch2)
+$ git reset --soft HEAD^
+-----> soft reset odnosno vrakjanje na Head( * ) za eden commit nazad no so zadrzuvanje na momentalnite promeni
+
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (branch2)
+$ git status
+On branch branch2
+Your branch is up to date with 'origin/branch2'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   shopping_list.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   shopping_list.txt
+-----> Da proverime za spojuvanje 
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (branch2)
+$ git add *.txt
+-----> addnuvanje za commit novata promena
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (branch2)
+$ git status
+On branch branch2
+Your branch is up to date with 'origin/branch2'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   shopping_list.txt
+
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (branch2)
+$ git commit -m "Modify item #4 and add item #6"
+[branch2 07d8431] Modify item #4 and add item #6
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+-----> Nov commit namestoto na  "Modify item #4" sega kje e "Modify item #4 and add item #6"
+
+----- log pod 19. ------
+
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (branch2)
+$ git log
+commit 07d8431a00d520f8fca2cb196fcbcf9485a22037 (HEAD -> branch2)
+Author: DasMatej <dasmatej7@gmail.com>
+Date:   Sun Apr 10 19:03:45 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit ce142a13a01fdf2df071c47f705decc39f4a9895 (origin/branch2)
+Author: DasMatej <dasmatej7@gmail.com>
+Date:   Sun Apr 10 18:04:15 2022 +0200
+
+    Add quantities to the items
+
+commit 43e6b8ca08051f675309e4f012be916d60bd87b6
+Author: DasMatej <dasmatej7@gmail.com>
+Date:   Sun Apr 10 17:58:14 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit de62268620cff9ca843fa5cb6d64092b15d89090
+Author: DasMatej <84350673+DasMatej@users.noreply.github.com>
+Date:   Sun Apr 10 17:34:20 2022 +0200
+
+    Update README.md
+
+commit 201e96e7190aa412c8038fcb6683e89d89300041
+Author: DasMatej <84350673+DasMatej@users.noreply.github.com>
+Date:   Sun Apr 10 17:33:59 2022 +0200
+
+    Initial commit
+----------------------------
+-----> Log od smenetiot commit
+
+
+$ git checkout master
+----->prefrluvanje vo master
+
+
+$ git merge branch1
+commit 07d8431a00d520f8fca2cb196fcbcf9485a22037 (HEAD -> branch2)
+Author: DasMatej <dasmatej7@gmail.com>
+Merge made by the 'ort' strategy.
+ shopping_list.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+----->Spojuvanje na grankata branch 1 so master
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git merge branch2
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+-----> Konflikt bidejkji ne se up to date grankite
+
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master|MERGING)
+$ git add *.txt
+-----> addnuvanje na branchot za razresuvanje na konfliktot
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master|MERGING)
+$ git commit -m "Merging conflict done"
+[master ca0414b] Merging conflict done
+-----> commiting na Merge conflict
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git merge branch2
+Already up to date.
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git merge branch1
+Already up to date.
+-----> proveruvanje dali e se up to date
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git reset --soft HEAD^
+
+Matej@DESKTOP-RQ3QCIA MINGW64 ~/Desktop/Finki/SI/lab1/SI_2022_lab1_173258 (master)
+$ git commit -m "Merge branch 'branch2'"
+[master 6167e38] Merge branch 'branch2'
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+-----> promena na messageot od Merging conflict done vo Merge branch 'branch2'
