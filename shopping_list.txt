@@ -2,4 +2,4 @@ Cheese x 5
 Bananas x 10
 Bread x 15
 Pasta x 3
-Rice x 50
+Rice x 25
