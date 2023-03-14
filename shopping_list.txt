@@ -1,11 +1,11 @@
-Cheese x 5
-Bananas x 10
-Bread x 15
+Cheese x 6
+Bananas x 11
+Bread x 16
 <<<<<<< HEAD
-Pasta x 3
-Rice x 25
+Pasta x 4
+Rice x 26
 =======
-Eggs x 3
-Rice x 50
+Eggs x 4
+Rice x 51
 Pudding x 10
 >>>>>>> branch2
